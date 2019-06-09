@@ -22,7 +22,16 @@ api = Daino::API.new
 api = Daino::API.new(api_endpoint: "http://your_api_endpoint", api_key: "yoru_api_key")
 
 # search jobs
-api.job.search(data: "1.1.1.1", data_type: "ip")
+jobs = api.job.search(data: "1.1.1.1", data_type: "ip")
+
+jobs.each do |job|
+  id = job.dig("id")
+  next unless id
+
+  # get a report of a job
+  report = api.job.report(id)
+  puts JSON.pretty_generate(report)
+end
 ```
 
 ## Implemented methods
@@ -34,7 +43,7 @@ api.job.search(data: "1.1.1.1", data_type: "ip")
 | GET         | /api/analyzer                 | List analyzers        | `#api.analyzer.list`                                                                                                                                                                                           |
 | POST        | /api/analyzer/_search         | Search analyzers      | `#api.analyzer.search(attributes)`                                                                                                                                                                             |
 | GET         | /api/analyzer/:analyzerId     | Get an analyzer       | `#api.analyzer.get_by_id(id)`                                                                                                                                                                                  |
-| GET         | /api/analyzer/:analyzerId     | Get an analyzer       | `#api.analyzer.get_by_id(id)` or `"api.analyzer.get_by_name(name)`                                                                                                                                             |
+| GET         | /api/analyzer/:analyzerId     | Get an analyzer       | `#api.analyzer.get_by_id(id)` or `#api.analyzer.get_by_name(name)`                                                                                                                                             |
 | GET         | /api/analyzer/type/:dataType  | Get analyzers by type | `#api.analyzer.get_by_type(type)`                                                                                                                                                                              |
 | POST        | /api/analyzer/:analyzerId/run | Run an analyzer       | `#api.analyzer.run_by_id(id, data:, data_type:, tlp: 0, message: nil, parameters: nil, force: nil)` or `#api.analyzer.run_by_name(name, data:, data_type:, tlp: 0, message: nil, parameters: nil, force: nil)` |
 
