@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://<API_ENDPOINT>:9001/api/organization
+    body:
+      encoding: UTF-8
+      string: '{"name":"create","description":"create","status":"Active"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - "<API_ENDPOINT>:9001"
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <API_KEY>
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Set-Cookie:
+      - CORTEX_SESSION=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoidGVzdCIsImV4cGlyZSI6IjE1NTkwNTg4NjY3OTIifSwibmJmIjoxNTU5MDU1MjY2LCJpYXQiOjE1NTkwNTUyNjZ9.mHM6AoRjwlctxFmy8-OX_3SDUkAQRE0i35Ipdza0aeM;
+        SameSite=Lax; Path=/; HTTPOnly
+      Date:
+      - Tue, 28 May 2019 14:54:26 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '203'
+    body:
+      encoding: UTF-8
+      string: '{"status":"Active","createdAt":1559055266532,"_id":"create","description":"create","createdBy":"test","_type":"organization","_parent":null,"_routing":"create","_version":1,"id":"create","name":"create"}'
+    http_version: 
+  recorded_at: Sun, 02 Jun 2019 02:26:15 GMT
+recorded_with: VCR 5.0.0

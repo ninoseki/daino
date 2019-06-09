@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://<API_ENDPOINT>:9001/api/analyzer/e50a2b57188e8c4e05abb5175fac6a26
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - "<API_ENDPOINT>:9001"
+      Authorization:
+      - Bearer <API_KEY>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - CORTEX-XSRF-TOKEN=6a31325e4faa0dc0b5da6b028ab09f645fca05c3-1559051075640-4ac5a4df6b4700441767e722;
+        Path=/
+      - CORTEX_SESSION=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoidGVzdDEiLCJleHBpcmUiOiIxNTU5MDU0Njc1NjQwIn0sIm5iZiI6MTU1OTA1MTA3NSwiaWF0IjoxNTU5MDUxMDc1fQ.mioqy8OfAeipTT2iNRQMUAY1oPDvkl2Zd0bFLAQppNk;
+        SameSite=Lax; Path=/; HTTPOnly
+      Date:
+      - Tue, 28 May 2019 13:44:35 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '764'
+    body:
+      encoding: UTF-8
+      string: '{"createdBy":"test1","workerDefinitionId":"Urlscan_io_Search_0_1_0","name":"Urlscan_io_Search_0_1_0","type":"analyzer","createdAt":1559019076146,"dataTypeList":["ip","domain","hash","url"],"jobCache":null,"description":"Search
+        IPs, domains, hashes or URLs on urlscan.io","_type":"worker","_routing":"test","_parent":"test","_id":"e50a2b57188e8c4e05abb5175fac6a26","_version":1,"id":"e50a2b57188e8c4e05abb5175fac6a26","maxTlp":2,"maxPap":2,"version":"0.1.0","author":"ninoseki","url":"https://github.com/ninoseki/cortex_urlscan_analyzer","license":"MIT","baseConfig":null,"analyzerDefinitionId":"Urlscan_io_Search_0_1_0","configuration":{"auto_extract_artifacts":false,"proxy_http":null,"proxy_https":null,"check_tlp":true,"max_tlp":2,"check_pap":true,"max_pap":2}}'
+    http_version: 
+  recorded_at: Sat, 01 Jun 2019 21:59:42 GMT
+recorded_with: VCR 5.0.0

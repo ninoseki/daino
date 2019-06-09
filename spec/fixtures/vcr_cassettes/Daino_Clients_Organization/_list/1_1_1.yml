@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://<API_ENDPOINT>:9001/api/organization
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - "<API_ENDPOINT>:9001"
+      Authorization:
+      - Bearer <API_KEY>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Total:
+      - '2'
+      Set-Cookie:
+      - CORTEX-XSRF-TOKEN=f06c9eea49b55c14df733c6798340e0ca934d3a8-1559053855367-a9151a3e7f52709de6a7162d;
+        Path=/
+      - CORTEX_SESSION=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoidGVzdCIsImV4cGlyZSI6IjE1NTkwNTc0NTUzNjcifSwibmJmIjoxNTU5MDUzODU1LCJpYXQiOjE1NTkwNTM4NTV9.wD9HRfOUTWzZEvBWxZNrrS9WN79j4SgAim7mkKOxkwI;
+        SameSite=Lax; Path=/; HTTPOnly
+      Date:
+      - Tue, 28 May 2019 14:30:55 GMT
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '[{"status":"Active","createdAt":1559018739669,"createdBy":"test","description":"test","_type":"organization","_routing":"test","_parent":null,"_id":"test","_version":1,"id":"test","name":"test"},{"status":"Active","createdAt":1559018708606,"createdBy":"init","description":"Default
+        organization","_type":"organization","_routing":"cortex","_parent":null,"_id":"cortex","_version":1,"id":"cortex","name":"cortex"}]'
+    http_version: 
+  recorded_at: Sun, 02 Jun 2019 01:16:24 GMT
+recorded_with: VCR 5.0.0

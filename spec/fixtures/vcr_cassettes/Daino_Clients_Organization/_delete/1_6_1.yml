@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://<API_ENDPOINT>:9001/api/organization
+    body:
+      encoding: UTF-8
+      string: '{"name":"delete","description":"delete","status":"Active"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - "<API_ENDPOINT>:9001"
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <API_KEY>
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Set-Cookie:
+      - CORTEX_SESSION=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoidGVzdCIsImV4cGlyZSI6IjE1NTkwNTg3NDk0NzgifSwibmJmIjoxNTU5MDU1MTQ5LCJpYXQiOjE1NTkwNTUxNDl9.u5S4GR4jls3hzfDv6LMMpaiWa1Qcwz5CpMgsYCJXea0;
+        SameSite=Lax; Path=/; HTTPOnly
+      Date:
+      - Tue, 28 May 2019 14:52:29 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '203'
+    body:
+      encoding: UTF-8
+      string: '{"status":"Active","createdAt":1559055149083,"description":"delete","_id":"delete","createdBy":"test","_type":"organization","_parent":null,"_routing":"delete","_version":1,"id":"delete","name":"delete"}'
+    http_version: 
+  recorded_at: Sun, 02 Jun 2019 02:24:17 GMT
+- request:
+    method: delete
+    uri: http://<API_ENDPOINT>:9001/api/organization/delete
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - "<API_ENDPOINT>:9001"
+      Authorization:
+      - Bearer <API_KEY>
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Set-Cookie:
+      - CORTEX_SESSION=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoidGVzdCIsImV4cGlyZSI6IjE1NTkwNTg3NTA0OTMifSwibmJmIjoxNTU5MDU1MTUwLCJpYXQiOjE1NTkwNTUxNTB9.rJO4Al83dJCyb0c0Y41wU2trMS4gpOqiAXzVgySmMSY;
+        SameSite=Lax; Path=/; HTTPOnly
+      Date:
+      - Tue, 28 May 2019 14:52:30 GMT
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 02 Jun 2019 02:24:18 GMT
+recorded_with: VCR 5.0.0
