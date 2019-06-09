@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://<API_ENDPOINT>:9001/api/organization/test/user
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - "<API_ENDPOINT>:9001"
+      Authorization:
+      - Bearer <API_KEY>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Total:
+      - '1'
+      Set-Cookie:
+      - CORTEX-XSRF-TOKEN=ae86f8cbb1c7cdee155c3f5e4ecd80ca43facb72-1559053576142-e87486c72d3bbefe15925638;
+        Path=/
+      - CORTEX_SESSION=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoidGVzdDEiLCJleHBpcmUiOiIxNTU5MDU3MTc2MTQyIn0sIm5iZiI6MTU1OTA1MzU3NiwiaWF0IjoxNTU5MDUzNTc2fQ.oQzDA0nHvDHUVxVRM0Aj3FtjkIqXwHY9RRt17qV9F1w;
+        SameSite=Lax; Path=/; HTTPOnly
+      Date:
+      - Tue, 28 May 2019 14:26:16 GMT
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '[{"organization":"test","createdAt":1559018783538,"name":"test","createdBy":"test","roles":["read","analyze","orgadmin"],"status":"Ok","updatedBy":"test","updatedAt":1559018859635,"_type":"user","_routing":"test1","_parent":null,"_id":"test1","_version":3,"id":"test1","hasKey":true,"hasPassword":true}]'
+    http_version: 
+  recorded_at: Sun, 02 Jun 2019 01:11:44 GMT
+recorded_with: VCR 5.0.0

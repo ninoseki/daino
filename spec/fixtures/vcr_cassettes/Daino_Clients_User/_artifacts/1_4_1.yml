@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://<API_ENDPOINT>:9001/api/job/AWr-bjRFdwl0qz9B4vL9/artifacts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - "<API_ENDPOINT>:9001"
+      Authorization:
+      - Bearer Qybyhm88Mk9Dywdet5153uYIC8iB3PqW
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Total:
+      - '0'
+      Set-Cookie:
+      - CORTEX-XSRF-TOKEN=20355cd80b9e7663a061bfad761c652f959268a5-1559058095265-ff8a21deff6f2c77d43a646e;
+        Path=/
+      - CORTEX_SESSION=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoidGVzdDEiLCJleHBpcmUiOiIxNTU5MDYxNjk1MjY1In0sIm5iZiI6MTU1OTA1ODA5NSwiaWF0IjoxNTU5MDU4MDk1fQ.U5cLmXlu21nmk6Kjdsg9BZsVf3LZEs6ugLRhD-OaS8o;
+        SameSite=Lax; Path=/; HTTPOnly
+      Date:
+      - Tue, 28 May 2019 15:41:35 GMT
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Sun, 02 Jun 2019 06:22:13 GMT
+recorded_with: VCR 5.0.0

@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://<API_ENDPOINT>:9001/api/job/AWr-bjRFdwl0qz9B4vL9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - "<API_ENDPOINT>:9001"
+      Authorization:
+      - Bearer Qybyhm88Mk9Dywdet5153uYIC8iB3PqW
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - CORTEX-XSRF-TOKEN=9b528e75a6b53307a74c4b6618f5816fb5fe4524-1559058095243-0a648f30886507acfe634b28;
+        Path=/
+      - CORTEX_SESSION=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoidGVzdDEiLCJleHBpcmUiOiIxNTU5MDYxNjk1MjQzIn0sIm5iZiI6MTU1OTA1ODA5NSwiaWF0IjoxNTU5MDU4MDk1fQ.HyZLa8kpBk92qpem9gHVx97geKhlX4ldnJshn1RboG0;
+        SameSite=Lax; Path=/; HTTPOnly
+      Date:
+      - Tue, 28 May 2019 15:41:35 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '663'
+    body:
+      encoding: UTF-8
+      string: '{"createdBy":"test1","pap":2,"status":"Deleted","workerName":"URLhaus_2_0","createdAt":1559046796354,"organization":"test","type":"analyzer","parameters":{},"message":"","workerId":"93b20372de579fe9768459aed3030115","dataType":"ip","data":"67.229.196.134","workerDefinitionId":"URLhaus_2_0","tlp":2,"startDate":1559046796960,"updatedBy":"test1","updatedAt":1559058095171,"endDate":1559046800082,"_type":"job","_routing":"AWr-bjRFdwl0qz9B4vL9","_parent":null,"_id":"AWr-bjRFdwl0qz9B4vL9","_version":6,"id":"AWr-bjRFdwl0qz9B4vL9","analyzerId":"93b20372de579fe9768459aed3030115","analyzerName":"URLhaus_2_0","analyzerDefinitionId":"URLhaus_2_0","date":1559046796354}'
+    http_version: 
+  recorded_at: Sun, 02 Jun 2019 06:22:13 GMT
+recorded_with: VCR 5.0.0

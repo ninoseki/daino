@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://<API_ENDPOINT>:9001/api/analyzer/e50a2b57188e8c4e05abb5175fac6a26/run
+    body:
+      encoding: UTF-8
+      string: '{"data":"1.1.1.1","dataType":"ip","tlp":0}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - "<API_ENDPOINT>:9001"
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <API_KEY>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - CORTEX_SESSION=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoidGVzdDEiLCJleHBpcmUiOiIxNTU5MDU0Njc1NTYzIn0sIm5iZiI6MTU1OTA1MTA3NSwiaWF0IjoxNTU5MDUxMDc1fQ.goSPSGb3OOhIBwMRrEgTQOE0qcgx1-WPoqFGMscV8hs;
+        SameSite=Lax; Path=/; HTTPOnly
+      Date:
+      - Tue, 28 May 2019 13:44:35 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '721'
+    body:
+      encoding: UTF-8
+      string: '{"createdBy":"test1","workerDefinitionId":"Urlscan_io_Search_0_1_0","pap":2,"status":"Success","createdAt":1559051029352,"organization":"test","data":"1.1.1.1","type":"analyzer","parameters":{},"tlp":0,"message":"","dataType":"ip","workerId":"e50a2b57188e8c4e05abb5175fac6a26","workerName":"Urlscan_io_Search_0_1_0","startDate":1559051030037,"updatedBy":"test1","updatedAt":1559051032066,"endDate":1559051032066,"_type":"job","_routing":"AWr-rstpdwl0qz9B4vMP","_parent":null,"_id":"AWr-rstpdwl0qz9B4vMP","_version":3,"fromCache":true,"id":"AWr-rstpdwl0qz9B4vMP","analyzerId":"e50a2b57188e8c4e05abb5175fac6a26","analyzerName":"Urlscan_io_Search_0_1_0","analyzerDefinitionId":"Urlscan_io_Search_0_1_0","date":1559051029352}'
+    http_version: 
+  recorded_at: Sat, 01 Jun 2019 21:59:42 GMT
+recorded_with: VCR 5.0.0

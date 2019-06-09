@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://<API_ENDPOINT>:9001/api/job/_search?range=all
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - "<API_ENDPOINT>:9001"
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <API_KEY>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Total:
+      - '6'
+      Set-Cookie:
+      - CORTEX_SESSION=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoidGVzdDEiLCJleHBpcmUiOiIxNTU5MDUxMzUzMTA2In0sIm5iZiI6MTU1OTA0Nzc1MywiaWF0IjoxNTU5MDQ3NzUzfQ.CLdAhCZdCnzWfNlFMFZIwgY0Rp7uBXA8NENAwbDHlvc;
+        SameSite=Lax; Path=/; HTTPOnly
+      Date:
+      - Tue, 28 May 2019 12:49:13 GMT
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '[{"createdBy":"test1","pap":2,"status":"Failure","organization":"test","type":"analyzer","parameters":{},"workerName":"Robtex_Reverse_PDNS_Query_1_0","message":"Invalid
+        output\nTraceback (most recent call last):\n  File \"Robtex/robtex.py\", line
+        2, in <module>\n    import requests\nImportError: No module named requests\n","dataType":"ip","workerDefinitionId":"Robtex_Reverse_PDNS_Query_1_0","data":"66.11.117.68","createdAt":1559019135054,"tlp":2,"workerId":"064444937baae3ff208816affb65d60c","startDate":1559019135325,"updatedBy":"test1","updatedAt":1559019135569,"endDate":1559019135566,"_type":"job","_routing":"AWr8yCBfdwl0qz9B4vL1","_parent":null,"_id":"AWr8yCBfdwl0qz9B4vL1","_version":3,"id":"AWr8yCBfdwl0qz9B4vL1","analyzerId":"064444937baae3ff208816affb65d60c","analyzerName":"Robtex_Reverse_PDNS_Query_1_0","analyzerDefinitionId":"Robtex_Reverse_PDNS_Query_1_0","date":1559019135054},{"createdBy":"test1","pap":2,"status":"Failure","createdAt":1559019135056,"organization":"test","type":"analyzer","parameters":{},"message":"Invalid
+        output\nTraceback (most recent call last):\n  File \"Robtex/robtex.py\", line
+        2, in <module>\n    import requests\nImportError: No module named requests\n","workerName":"Robtex_IP_Query_1_0","workerId":"c6d3e6e82d5a4ea56f0037951c6bae05","dataType":"ip","data":"66.11.117.68","workerDefinitionId":"Robtex_IP_Query_1_0","tlp":2,"startDate":1559019135367,"updatedBy":"test1","updatedAt":1559019135577,"endDate":1559019135571,"_type":"job","_routing":"AWr8yCBadwl0qz9B4vL0","_parent":null,"_id":"AWr8yCBadwl0qz9B4vL0","_version":3,"id":"AWr8yCBadwl0qz9B4vL0","analyzerId":"c6d3e6e82d5a4ea56f0037951c6bae05","analyzerName":"Robtex_IP_Query_1_0","analyzerDefinitionId":"Robtex_IP_Query_1_0","date":1559019135056},{"createdBy":"test1","pap":2,"status":"Success","workerName":"URLhaus_2_0","organization":"test","type":"analyzer","parameters":{},"message":"","workerId":"93b20372de579fe9768459aed3030115","dataType":"ip","workerDefinitionId":"URLhaus_2_0","data":"66.11.117.68","createdAt":1559019135054,"tlp":2,"startDate":1559019135319,"updatedBy":"test1","updatedAt":1559019138997,"endDate":1559019138996,"_type":"job","_routing":"AWr8yCBWdwl0qz9B4vLz","_parent":null,"_id":"AWr8yCBWdwl0qz9B4vLz","_version":3,"id":"AWr8yCBWdwl0qz9B4vLz","analyzerId":"93b20372de579fe9768459aed3030115","analyzerName":"URLhaus_2_0","analyzerDefinitionId":"URLhaus_2_0","date":1559019135054},{"createdBy":"test1","workerDefinitionId":"Urlscan_io_Search_0_1_0","pap":2,"status":"Success","organization":"test","type":"analyzer","parameters":{},"message":"","dataType":"ip","workerId":"e50a2b57188e8c4e05abb5175fac6a26","data":"67.229.196.134","workerName":"Urlscan_io_Search_0_1_0","createdAt":1559046796352,"tlp":2,"startDate":1559046796952,"updatedBy":"test1","updatedAt":1559046800081,"endDate":1559046800081,"_type":"job","_routing":"AWr-bjRJdwl0qz9B4vL-","_parent":null,"_id":"AWr-bjRJdwl0qz9B4vL-","_version":3,"id":"AWr-bjRJdwl0qz9B4vL-","analyzerId":"e50a2b57188e8c4e05abb5175fac6a26","analyzerName":"Urlscan_io_Search_0_1_0","analyzerDefinitionId":"Urlscan_io_Search_0_1_0","date":1559046796352},{"createdBy":"test1","pap":2,"status":"Failure","organization":"test","type":"analyzer","parameters":{},"message":"Invalid
+        output\nTraceback (most recent call last):\n  File \"Robtex/robtex.py\", line
+        2, in <module>\n    import requests\nImportError: No module named requests\n","workerName":"Robtex_IP_Query_1_0","workerId":"c6d3e6e82d5a4ea56f0037951c6bae05","dataType":"ip","data":"67.229.196.134","workerDefinitionId":"Robtex_IP_Query_1_0","tlp":2,"createdAt":1559046796408,"startDate":1559046796999,"updatedBy":"test1","updatedAt":1559046797155,"endDate":1559046797155,"_type":"job","_routing":"AWr-bjR6dwl0qz9B4vMA","_parent":null,"_id":"AWr-bjR6dwl0qz9B4vMA","_version":3,"id":"AWr-bjR6dwl0qz9B4vMA","analyzerId":"c6d3e6e82d5a4ea56f0037951c6bae05","analyzerName":"Robtex_IP_Query_1_0","analyzerDefinitionId":"Robtex_IP_Query_1_0","date":1559046796408},{"createdBy":"test1","pap":2,"status":"Failure","organization":"test","type":"analyzer","parameters":{},"workerName":"Robtex_Reverse_PDNS_Query_1_0","message":"Invalid
+        output\nTraceback (most recent call last):\n  File \"Robtex/robtex.py\", line
+        2, in <module>\n    import requests\nImportError: No module named requests\n","createdAt":1559046796397,"dataType":"ip","data":"67.229.196.134","workerDefinitionId":"Robtex_Reverse_PDNS_Query_1_0","tlp":2,"workerId":"064444937baae3ff208816affb65d60c","startDate":1559046797004,"updatedBy":"test1","updatedAt":1559046797150,"endDate":1559046797149,"_type":"job","_routing":"AWr-bjR6dwl0qz9B4vL_","_parent":null,"_id":"AWr-bjR6dwl0qz9B4vL_","_version":3,"id":"AWr-bjR6dwl0qz9B4vL_","analyzerId":"064444937baae3ff208816affb65d60c","analyzerName":"Robtex_Reverse_PDNS_Query_1_0","analyzerDefinitionId":"Robtex_Reverse_PDNS_Query_1_0","date":1559046796397}]'
+    http_version: 
+  recorded_at: Sat, 01 Jun 2019 21:03:13 GMT
+recorded_with: VCR 5.0.0
