@@ -1,7 +1,7 @@
 # daino
 
 [![Gem Version](https://badge.fury.io/rb/daino.svg)](https://badge.fury.io/rb/daino)
-[![Build Status](https://travis-ci.org/ninoseki/daino.svg?branch=master)](https://travis-ci.org/ninoseki/daino)
+[![Build Status](https://travis-ci.com/ninoseki/daino.svg?branch=master)](https://travis-ci.com/ninoseki/daino)
 [![CodeFactor](https://www.codefactor.io/repository/github/ninoseki/daino/badge)](https://www.codefactor.io/repository/github/ninoseki/daino)
 [![Coverage Status](https://coveralls.io/repos/github/ninoseki/daino/badge.svg?branch=master)](https://coveralls.io/github/ninoseki/daino?branch=master)
 
